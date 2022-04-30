@@ -1,4 +1,16 @@
-const { defineConfig } = require('@vue/cli-service')
+const {defineConfig} = require('@vue/cli-service')
 module.exports = defineConfig({
-  transpileDependencies: true
+    transpileDependencies: true,
+    devServer: {
+        proxy: {
+            '/api': {
+                target: "https://netease-cloud-music-api-livid-seven.vercel.app",
+                ws: true,
+                changeOrigin: true,
+                pathRewrite:{
+                    '^/api': ''
+                }
+            }
+        }
+    }
 })
