@@ -1,6 +1,6 @@
 <template>
   <ec-list @onLoad="onLoad" @onLoadMore="onLoadMore">
-    <div v-for="item in playlists" :key="item.id" class="item">
+    <div v-for="item in playlists" :key="item.id" class="item" @click="goto(item.id)">
       <img class="item__img" :src="item.coverImgUrl" alt="">
       <div class="item__info">
         <div>
@@ -33,7 +33,7 @@ export default {
   methods: {
     onLoad(complete, fail) {
       this.offset = 0;
-      this.$axios.get('/top/playlist?offset=' + (this.offset += this.limit) + '&limit=' + this.limit)
+      this.$axios.get('/top/playlist?offset=' + this.offset + '&limit=' + this.limit)
           .then(res => {
             this.playlists = res.data.playlists;
             complete();
@@ -44,7 +44,8 @@ export default {
           });
     },
     onLoadMore(complete, fail, nomore) {
-      this.$axios.get('/top/playlist?offset=' + (this.offset += this.limit) + '&limit=' + this.limit)
+      this.offset+=this.limit;
+      this.$axios.get('/top/playlist?offset=' + this.offset + '&limit=' + this.limit)
           .then(res => {
             if(res.data.playlists.length){
               this.playlists = this.playlists.concat(res.data.playlists);
@@ -57,6 +58,9 @@ export default {
             console.error(err);
             fail();
           });
+    },
+    goto(id){
+      this.$router.push('/playListDetail/'+id);
     }
   }
 }

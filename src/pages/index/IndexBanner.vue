@@ -41,7 +41,7 @@ export default {
       // console.log('on swiper', swiper);
     },
     onSlideChange() {
-      console.log('on slide change');
+      // console.log('on slide change');
     }
   },
   created() {

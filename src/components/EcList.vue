@@ -162,9 +162,9 @@ export default {
   text-align: center;
   color: #6B7280;
   background: #F3F4F6;
-  transition-property: height, line-height;
-  transition-duration: .3s;
-  transition-timing-function: ease;
+  /*transition-property: height, line-height;*/
+  /*transition-duration: .3s;*/
+  /*transition-timing-function: ease;*/
 }
 
 .load-more--show{

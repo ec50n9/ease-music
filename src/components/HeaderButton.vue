@@ -29,7 +29,7 @@ export default {
   border-radius: 1rem;
   text-align: center;
   color: #1D4ED8;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .fr {

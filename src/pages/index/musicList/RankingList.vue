@@ -6,7 +6,7 @@
         <div class="item__update">{{ item.updateFrequency }}</div>
         <div class="item__tracks">
           <div v-for="(track, index) in item.tracks" :key="index" class="item__track">
-            <span style="color: #000">{{ index + 1 }}. {{ track.first }}</span> - {{ track.second }}
+            <span style="color: #000; font-size: 1rem">{{ index + 1 }}. {{ track.first }}</span> - {{ track.second }}
           </div>
         </div>
       </div>
@@ -105,6 +105,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  line-height: 1rem;
+  font-size: .8rem;
 }
 
 .item__track {

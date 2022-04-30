@@ -34,7 +34,7 @@ export default {
 <style scoped>
 .song {
   padding: .5em 0;
-  margin: 0 1em;
+  width: 100%;
   background: #fff;
   border-bottom: 1px solid #D1D5DB;
 }

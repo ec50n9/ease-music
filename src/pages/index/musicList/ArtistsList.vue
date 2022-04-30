@@ -21,7 +21,7 @@ export default {
   methods: {
     onLoad(complete, fail) {
       this.offset = 0;
-      this.$axios.get('/top/artists?offset='+(this.offset+=this.limit)+'&limit='+this.limit)
+      this.$axios.get('/top/artists?offset='+this.offset+'&limit='+this.limit)
           .then(res => {
             this.artists = res.data.artists;
             complete();
@@ -32,7 +32,8 @@ export default {
           });
     },
     onLoadMore(complete, fail, nomore){
-      this.$axios.get('/top/artists?offset='+(this.offset+=this.limit)+'&limit='+this.limit)
+      this.offset+=this.limit;
+      this.$axios.get('/top/artists?offset='+this.offset+'&limit='+this.limit)
           .then(res => {
             console.log(res.data.artists)
             if(res.data.artists.length){

@@ -2,10 +2,10 @@
   <div>
     <header-bar>
       <header-button>
-        <i class="fa fa-user-o" aria-hidden="true"></i>
+        <i class="fa fa-user" aria-hidden="true"></i>
       </header-button>
       <header-button position="right">
-        <i class="fa fa-share-square-o" aria-hidden="true"></i>
+        <i class="fa fa-search" aria-hidden="true"></i>
       </header-button>
     </header-bar>
     <big-title>别来无恙！</big-title>
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import MusicNav from "@/components/MusicNav";
+import MusicNav from "@/pages/index/MusicNav";
 import HeaderBar from "@/components/HeaderBar";
 import HeaderButton from "@/components/HeaderButton";
 import BigTitle from "@/components/BigTitle";
