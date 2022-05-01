@@ -17,7 +17,12 @@ export default {
   url('//at.alicdn.com/t/font_3355389_r9he776b91.ttf?t=1651111723196') format('truetype');
 }
 
+html, body{
+  height: 100%;
+}
+
 #app {
+  height: 100%;
   font-family: Inter,Roboto,Oxygen,Fira Sans,Helvetica Neue,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

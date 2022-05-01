@@ -11,7 +11,7 @@
     <big-title>别来无恙！</big-title>
     <sub-title>这里有一些新歌👇</sub-title>
     <index-banner></index-banner>
-    <MusicNav class="music-nav"></MusicNav>
+    <music-nav class="music-nav"></music-nav>
     <router-view></router-view>
   </div>
 </template>
