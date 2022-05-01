@@ -1,5 +1,5 @@
 <template>
-  <div class="button" :class="{fl: position==='left', fr: position==='right'}">
+  <div class="header-button" :class="{fl: position==='left', fr: position==='right'}">
     <slot></slot>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-.button {
+.header-button {
   width: 3.5rem;
   height: 3.5rem;
   line-height: 3.5rem;

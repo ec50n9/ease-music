@@ -12,7 +12,8 @@ export default {
 
 <style>
 .header-bar{
-  padding: 1.5rem 1.5rem 0;
+  padding: 1.5rem 1.5rem;
   overflow: auto;
+  background: #fff;
 }
 </style>

@@ -92,7 +92,8 @@ export default {
 .cover {
   max-width: 40%;
   height: auto;
-  padding: 1.5rem 1.5rem 0;
+  padding: 0 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .cover > img {

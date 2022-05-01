@@ -1,6 +1,8 @@
 <template>
   <ec-list @onLoad="onLoad" @onLoadMore="onLoadMore">
-    <div v-for="item in topList" :key="item.id" class="item" :class="{'item--sm':!item.tracks.length}">
+    <div v-for="item in topList" :key="item.id"
+         class="item" :class="{'item--sm':!item.tracks.length}"
+        @click="$router.push('/playListDetail/'+item.id)">
       <img class="item__img" :src="item.coverImgUrl" :alt="item.name">
       <div class="item__info">
         <div class="item__update">{{ item.updateFrequency }}</div>
