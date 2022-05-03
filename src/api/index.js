@@ -27,3 +27,4 @@ http.interceptors.response.use(function (response){
 });
 
 export default http;
+export const reqTopListArtist=()=>http.get('/toplist/artist');

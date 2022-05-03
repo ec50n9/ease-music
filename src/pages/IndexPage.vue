@@ -28,6 +28,8 @@ export default {
   components: {IndexBanner, SubTitle, BigTitle, HeaderButton, HeaderBar, MusicNav},
   data() {
     return {}
+  },
+  created(){
   }
 }
 </script>
